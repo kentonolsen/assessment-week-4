@@ -5,11 +5,21 @@
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
-    <form>
+    <form id="form-1">
       Name: <input type="text" placeholder="Type in your name" id="name-text"/>
-      <button>Submit</button>
+      <button id="form-1-submit">Submit</button>
     </form>
     <button id="get-names">Get Names</button>
+    <form id="form-2">
+      Update Name: <input type="text" placeholder="Change name" id="update-name"/>
+      Previous Name: <input type="text" placeholder="Current Name" id="current-name"/>
+      <button id="form-2-submit">Submit</button>
+      
+    </form>
+    <form>
+      Delete Name: <input type="text" placeholder="Name Id" id="delete-field"/>
+      <button id="delete-submit">Submit</button>
+    </form>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
