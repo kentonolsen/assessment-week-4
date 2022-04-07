@@ -17,7 +17,7 @@ const submitFunction = function(e) {
     let body = {
         name: nameField.value
     }
-    axios.post(baseURL, body)
+    axios.post('/api/names', body)
     .then(sendNames)
 }
 const updateFunction = function(e) {
@@ -27,13 +27,13 @@ const updateFunction = function(e) {
         name: nameUpdate.value
     }
     console.log(nameUpdate.value)
-    axios.put(`${baseURL}/${nameTime}`, updatedName)
+    axios.put(`/api/names/${nameTime}`, updatedName)
     .then()
 }
 console.log('working')
 
 const namesFunction = function(e) {
-    axios.get(baseURL)
+    axios.get('/api/names')
     .then(sendNames)
 }
 const sendNames = function(arr) {
@@ -45,7 +45,7 @@ const sendNames = function(arr) {
 const deleteFunction = function(e){
     e.preventDefault()
     let idNumber = nameId.value
-    axios.delete(`${baseURL}/${idNumber}`)
+    axios.delete(`/api/names/${idNumber}`)
 }
 
 namesBtn.addEventListener('click', namesFunction)

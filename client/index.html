@@ -24,7 +24,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       document.getElementById("complimentButton").onclick = function () {
-        axios.get("http://localhost:5500/api/compliment/")
+        axios.get("/api/compliment/")
             .then(function (response) {
               const data = response.data;
               alert(data);
